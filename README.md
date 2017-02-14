@@ -1,6 +1,17 @@
 # read-this
 
-FIXME
+Weekend project: A curl-app - something like wttr.in - but for news!
+
+Why would you ever leave your comfy terminal if you could easily
+curl in the best parts of the internet right there?
+
+Who needs fancy formatting, or style?
+
+Rhetorical questions, what about those?
+
+Think of ```read-this``` it as slow, clunky, rss-ish terminal feeder-reader 
+
+For me, by me!
 
 ## Prerequisites
 
