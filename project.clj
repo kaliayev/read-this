@@ -1,4 +1,4 @@
-(defproject what-to-read "0.1.0-SNAPSHOT"
+(defproject read-this "0.1.0-SNAPSHOT"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :min-lein-version "2.0.0"
@@ -11,7 +11,7 @@
   :plugins [[lein-ring "0.9.7"]
             [lein-bin "0.3.4"]]
   :bin {:name "read-this"}
-  :ring {:handler what-to-read.handler/app}
+  :ring {:handler read-this.handler/app}
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
                         [ring/ring-mock "0.3.0"]]}})

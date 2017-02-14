@@ -1,4 +1,4 @@
-(ns what-to-read.handler
+(ns read-this.handler
   (:require [compojure.core :refer :all]
             [compojure.route :as route]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
@@ -6,7 +6,7 @@
             [cheshire.core :as json]
             [hiccup.page :refer [html5 include-css]]
             [hiccup.element :refer [link-to]]
-            [what-to-read.formatting :as f])
+            [read-this.formatting :as f])
   (:import [java.net URL]))
 
 (def site-data {:3am {:title-selector [:ul :h3 :a]

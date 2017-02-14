@@ -1,2 +1,2 @@
-(ns what-to-read.reading)
+(ns read-this.reading)
 

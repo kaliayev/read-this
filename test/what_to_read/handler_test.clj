@@ -1,7 +1,7 @@
-(ns what-to-read.handler-test
+(ns read-this.handler-test
   (:require [clojure.test :refer :all]
             [ring.mock.request :as mock]
-            [what-to-read.handler :refer :all]))
+            [read-this.handler :refer :all]))
 
 (deftest test-app
   (testing "main route"

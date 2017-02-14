@@ -1,4 +1,4 @@
-(ns what-to-read.formatting
+(ns read-this.formatting
   (:require [clojure.string :as s]))
 
 (defn trunc

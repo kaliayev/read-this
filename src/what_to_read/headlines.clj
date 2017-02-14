@@ -1,2 +1,2 @@
-(ns what-to-read.headlines)
+(ns read-this.headlines)
 
