@@ -55,9 +55,9 @@
 
 (defn line-breaker
   [s]
-  (if (< (count s) 101)
+  (if (< (count s) 95)
     s
-    (str (trunc s 100) (if (adj-break? s 100) "\n" "-\n") (line-breaker (subs s 100)))))
+    (str (trunc s 94) (if (adj-break? s 94) "\n" "-\n") (line-breaker (subs s 94)))))
 
 (defn deep-trim [text]
   (->> text

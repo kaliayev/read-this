@@ -7,7 +7,7 @@ curl in the best parts of the internet right there?
 
 Who needs fancy formatting, or style?
 
-Rhetorical questions, what about those?
+Rhetorical questions, what are those about?
 
 Think of ```read-this``` it as slow, clunky, rss-ish terminal feeder-reader 
 
