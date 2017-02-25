@@ -7,7 +7,8 @@
                  [enlive "1.1.6"]
                  [cheshire "5.7.0"]
                  [hiccup "1.0.4"]
-                 [ring/ring-defaults "0.2.1"]]
+                 [ring/ring-defaults "0.2.1"]
+                 [io.aviso/pretty "0.1.33"]]
   :plugins [[lein-ring "0.9.7"]
             [lein-bin "0.3.4"]]
   :bin {:name "read-this"}

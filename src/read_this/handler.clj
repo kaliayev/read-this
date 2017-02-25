@@ -5,7 +5,8 @@
             [net.cgrand.enlive-html :as html]
             [cheshire.core :as json]
             [hiccup.page :refer [html5 include-css]]
-            [hiccup.element :refer [link-to]]
+            [hiccup.element :refer [link-to]] 
+            [io.aviso.ansi :as colour]
             [read-this.formatting :as f])
   (:import [java.net URL]))
 
@@ -178,14 +179,19 @@
                                                "" articles)]]))
 
 (defroutes app-routes
-  (GET "/" [] (page (a-couple-articles 2 "all"))) 
+  (GET "/" [] (page (a-couple-articles 2 "all")))
+  (GET "/test" {{:strs [in]} :query-params
+                :keys [headers]}
+       {:body (str "{\"user-agent\": \"" (colour/bold-red (get headers "user-agent")) "\"}")
+        :headers {"Content-Type" "application/json"}
+        :status 200})
   (GET "/from" {{:strs [source read]} :query-params}
        (cond
          (and source read) (read-article
                             (:url (nth (headline-grabber (keyword source)) (dec (Integer/parseInt read))))
                             (keyword source))
-             source (page {(keyword source) (headline-grabber (keyword source))})
-             :else (route/not-found "Provide source, or source and article number to read")))
+         source (page {(keyword source) (headline-grabber (keyword source))})
+         :else (route/not-found "Provide source, or source and article number to read")))
   (GET "/ball" {{:strs [n]} :query-params} (page (a-couple-articles (if n (Integer/parseInt n) 4) "nba")))
   (GET "/lit" {{:strs [n]} :query-params} (page (a-couple-articles (if n (Integer/parseInt n) 4) "lit")))
   (GET "/news" {{:strs [n]} :query-params} (page (a-couple-articles (if n (Integer/parseInt n) 8) "news")))
