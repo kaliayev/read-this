@@ -12,7 +12,8 @@
 
 (def site-data {:3am {:title-selector [:ul :h3 :a]
                       :url (URL. "http://www.3ammagazine.com/3am/")
-                      :protocol :http}
+                      :protocol :http
+                      :p-selector [:div.entry :p]}
                 :paris-review {:title-selector [:main :ul :li :article :h1 :a]
                                :url (URL. "https://www.theparisreview.org/blog/")
                                :protocol :https
@@ -137,6 +138,10 @@
                                         (map #(str "    " %))
                                         (f/str-with-p))
           (= source :nyrb) (->> (get-article-parags url-str source)
+                                (map html/text)
+                                (map #(str "    " %))
+                                (f/str-with-p))
+          (= source :3am) (->> (get-article-parags url-str source)
                                 (map html/text)
                                 (map #(str "    " %))
                                 (f/str-with-p))
