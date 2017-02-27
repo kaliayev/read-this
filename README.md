@@ -33,7 +33,9 @@ Get a selection of links and titles by hitting ```GET /{{category}}``` where the
 Individual sources can also be hit at ```GET /from?source={{source}}```
 The sources are listed above under their respective categories.
 
-Using sources, you can also read a given article by providing the query-param for the index number like ```GET /from?source=3am&read=2```
+Using sources, you can also read a given article by providing the query-param for the index number like
+
+```GET /from?source=3am&read=2```
 
 ### Adding Sources
 
